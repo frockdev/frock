@@ -2,6 +2,8 @@
 
 #### Easy tool to run your applications with Podman locally.
 
+For now, we support only MacOS. Feel free to create pull requests to help us support other OS.
+
 ### Installation:
 Go to Releases and install any version you want.  
 
