@@ -11,8 +11,18 @@ You also need to install [Podman](https://podman.io/docs/installation)
 
 Now download bin/frock_darwin_arm64 to your machine, and move it to /usr/local/bin/frock:
 
-
 `mv ~/Downloads/frock_darwin_arm64 /usr/local/bin/frock`
+
+### Connect podman socket
+
+Create a file ~/podman-socket with the following content:
+
+`unix://YOUT_SOCKET_PATH`
+
+You can get your `YOUR_SOCKET_PATH` from podman's machine info or if run ` podman machine inspect` `PodmanSocket.Path` field.
+
+Yes, finally it will seems like `unix:///var/some/special/path/podman.sock`
+
 
 ### Json schema for yaml
 Run `frock schema` to generate json schema for frock.yaml.
