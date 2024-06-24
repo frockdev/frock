@@ -12,21 +12,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Set up Go
-        uses: actions/setup-go@v4
-        with:
-          go-version-file: "go.mod"
-
-#      - name: Install dependencies
-#        run: |
-#          sudo apt-get update
-#          sudo apt-get install -y libgpgme-dev
-
-      - name: Build project
-        run: "sudo apt-get update && sudo apt-get install -y libgpgme-dev && GOOS=darwin GOARCH=arm64 go build -o frock_darwin_arm64 main.go"
-
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
           files: |
-            frock_darwin_arm64
+            bin/frock_darwin_arm64

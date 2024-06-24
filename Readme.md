@@ -2,10 +2,15 @@
 
 #### Easy tool to run your applications with Podman locally.
 
-For now, we support only MacOS. Feel free to create pull requests to help us support other OS.
+For now, we support only MacOS ARM. Feel free to create pull requests to help us support other OS.
 
 ### Installation:
-Go to Releases and install any version you want.  
+Install gpgme first: `brew install gpgme`
+
+Now download bin/frock_darwin_arm64 to your machine, and move it to /usr/local/bin/frock:
+
+
+`mv ~/Downloads/frock_darwin_arm64 /usr/local/bin/frock`
 
 ### Json schema for yaml
 Run `frock schema` to generate json schema for frock.yaml.
