@@ -1,19 +1,19 @@
-name: Build and release Go Project
-
-on:
-  push:
-    tags:
-      - "v*"
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Release
-        uses: softprops/action-gh-release@v1
-        with:
-          files: |
-            bin/frock_darwin_arm64
+#name: Build and release Go Project
+#
+#on:
+#  push:
+#    tags:
+#      - "v*"
+#
+#jobs:
+#  build:
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: Checkout code
+#        uses: actions/checkout@v4
+#
+#      - name: Release
+#        uses: softprops/action-gh-release@v1
+#        with:
+#          files: |
+#            bin/frock_darwin_arm64
