@@ -1,0 +1,27 @@
+name: Build and release Go Project
+
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Go
+        uses: actions/setup-go@v4
+        with:
+          go-version-file: "go.mod"
+
+      - name: Build project
+        run: "GOOS=darwin GOARCH=arm64 go build -o frock_darwin_arm64 main.go"
+
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: |
+            frock_darwin_arm64
