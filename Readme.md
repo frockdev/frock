@@ -7,6 +7,8 @@ For now, we support only MacOS ARM. Feel free to create pull requests to help us
 ### Installation:
 Install gpgme first: `brew install gpgme`
 
+You also need to install [Podman](https://podman.io/docs/installation)
+
 Now download bin/frock_darwin_arm64 to your machine, and move it to /usr/local/bin/frock:
 
 
